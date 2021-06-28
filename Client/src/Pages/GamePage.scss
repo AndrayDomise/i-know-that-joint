@@ -1,0 +1,96 @@
+@use '../partials/base/font' as *;
+@use '../partials/base/pageSettings'as *;
+@use '../partials/base/variables' as *;
+@use '../partials/abstracts/mixins' as *;
+
+h1 {
+    font: $paragraph-font;
+    font-size: x-large;
+    font-weight: 600
+}
+
+.bgimage {
+    background: url('../assets/Images/VaporWave.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    margin-top: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+}
+
+.row{
+    height: 100vh;
+}
+
+.gamePlay{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 0 100px;
+}
+
+.artBox{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.answerBox{
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.loginButton{
+    margin: 0 auto;
+}
+
+.gameBoard{
+    font: $paragraph-font;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.timerBox{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameButton{
+    margin-top: 50px;
+    font: $paragraph-font;
+    font-size: x-large;
+    font-weight: 600;
+    background-color: #c66db6;
+    height: 100px;
+    width: 300px;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 5px;
+    transition-duration: .25s;
+}
+
+.gameButton:hover {
+    background-color: red;
+}
+
+.spotifyIcon{
+    margin: 0px 20px;
+}

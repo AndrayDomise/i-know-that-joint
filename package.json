@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "scripts": {
+    "build": "cd client && npm run build && cd ..",
+    "server": "cd server && npm start",
+    "start": "npm run build && npm run server",
+    "buildrun": "cd client && npm run build && cd .. && cd server && npm start"
+  }
+}
+

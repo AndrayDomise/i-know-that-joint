@@ -1,0 +1,26 @@
+@font-face{
+    font-family: 'Raleway Bold';
+    src: url('../../assets/Fonts/Audiowide-Regular.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+}
+
+$header-font: 'Raleway Bold', sans-serif;
+$paragraph-font: 'Raleway Bold', sans-serif;
+
+$mh1-font: 1.75rem/2.25rem $header-font;
+$mh2-font: 1.25rem/1.75rem $header-font;
+$mh3-font: 0.8125rem/1.25rem $header-font;
+$mh4-font: 0.6875rem/1rem $header-font;
+$mp1-font: 0.9375rem/1.625rem $paragraph-font;
+$mp2-font: 0.8125rem/1.25rem $paragraph-font;
+$mp3-font: 0.6875rem/1rem $paragraph-font;
+
+$h1-font: 2rem/2.5rem $header-font;
+$h2-font: 1.5rem/2rem $header-font;
+$h3-font: 0.875rem/1.375rem $header-font;
+$h4-font: 0.75rem/1.125rem $header-font;
+$p1-font: 1rem/1.75rem $paragraph-font;
+$p2-font: 0.875rem/1.375rem $paragraph-font;
+$p3-font: 0.75rem/1.125rem $paragraph-font;
