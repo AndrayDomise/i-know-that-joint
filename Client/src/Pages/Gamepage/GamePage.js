@@ -1,10 +1,7 @@
 import React from 'react';
-import axios from 'axios';
-import {InputGroup, FormControl, Input} from 'react-bootstrap';
-import ls from 'local-storage';
-import Scoreboard from '../Components/Scoreboard/Scoreboard';
 import SpotifyIcon from '../assets/Icons/SpotifyIcon.png';
 import './GamePage.scss';
+import AnswerBox from './Answerbox';
 
 
 class GamePage extends React.Component{
@@ -238,39 +235,34 @@ class GamePage extends React.Component{
                                 </a>
                             </div> : (
                                 <React.Fragment>  
-                                            <div className="gamePlay">
-                                                <section>
-                                                    <div className="artBox">
-                                                        {this.state.showAlbumArt && 
-                                                        <img src={this.state.currentTrack.image} style={{ height: 400, borderRadius: "5px"}}/>}
-                                                    </div>
-                                                </section>
-                                            <form onSubmit={this.handleSubmit}>
-                                                    <div className="form-group">
-                                                        <input  
-                                                            type="text" 
-                                                            name="value"
-                                                            placeholder={"Can you name that joint?"} 
-                                                            className="form-control" 
-                                                            onChange={this.handleChange}
-                                                        />
-                                                    </div>
-                                                        <div className="form-group">
-                                                    </div>
-                                            </form>
-                                            <div className="answerBox">
-                                            <div className="timerBox">
-                                                <h1 style={{color: "red", marginTop: "0px"}} >{this.state.timer}</h1>
-                                                    <input type="button" className="gameButton" value={this.state.buttonText} onClick={() => this.clicker(this.state.currentTrack)}/>
-                                                <h1 style={{color: "red", marginTop: "0px"}}>{isPlaying}</h1>
-                                                <Scoreboard playerPoints={this.state.playerPoints} />
-                                                <a href='/login' className="navbar-brand">
-                                                    <img src={SpotifyIcon} height="45" alt="Spotify Icon" className="spotifyIcon d-inline-block align-middle mr-2" />
-                                                    Refresh Spotify
-                                                </a>
+                                    <div className="gamePlay">
+                                        <section>
+                                            <div className="artBox">
+                                                {this.state.showAlbumArt && 
+                                                <img src={this.state.currentTrack.image} style={{ height: 400, borderRadius: "5px"}}/>}
+                                            </div>
+                                        </section>
+                                        <form onSubmit={this.handleSubmit}>
+                                            <div className="form-group">
+                                                <input  
+                                                    type="text" 
+                                                    name="value"
+                                                    placeholder={"Can you name that joint?"} 
+                                                    className="form-control" 
+                                                    onChange={this.handleChange}
+                                                />
+                                            </div>
+                                            <div className="form-group">
                                                 </div>
-                                            </div>
-                                            </div>
+                                        </form>
+                                        <AnswerBox
+                                            timer={this.state.timer}
+                                            buttonText={this.state.buttonText}
+                                            isPlaying={isPlaying}
+                                            playerPoints={this.state.playerPoints}
+                                            SpotifyIcon={SpotifyIcon}
+                                        />
+                                    </div>
                                 </React.Fragment>
                             )}
                         </div>

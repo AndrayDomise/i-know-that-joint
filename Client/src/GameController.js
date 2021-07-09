@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 import lodash from 'lodash';
 import SpotifyWebApi from 'spotify-web-api-js';
-import GamePage from './Pages/GamePage';
+import GamePage from './Pages/Gamepage/GamePage';
 
 const spotifyApi = new SpotifyWebApi();
 
